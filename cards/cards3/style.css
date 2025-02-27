@@ -1,6 +1,12 @@
 @font-face {
-  font-family: MiFuentePersonalizada;
+  font-family: tangerineBold;
   src: url('./fonts/Tangerine-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: tangerineRegular;
+  src: url('./fonts/Tangerine-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -9,14 +15,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* outline: tomato 1px solid; */
-}
-
-body {
-  margin-top: 150px;
+  font-family: 'tangerineBold', 'tangerineRegular', sans-serif;
 }
 
 section {
+  margin: 25px;
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -58,7 +61,6 @@ article {
     z-index: 4;
     width: 25%;
     height: 80%;
-    /* display: none; */
 
     background-color: #c28654;
     background-image: url(img/istockphoto-172397431-612x612.jpg);
@@ -124,7 +126,6 @@ article {
   position: relative;
   left: 0;
   transition: all 0.3s ease-in-out;
-  /* font-size: clamp(8px, 3vw, 16px); */
 
   &:hover {
     left: 50px;
@@ -132,8 +133,7 @@ article {
 
   & p {
     padding-inline: 10px;
-    font-family: 'MiFuentePersonalizada', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
   }
 }
 
@@ -141,30 +141,25 @@ article {
   left: 5px;
 }
 
-#tarjeta2 {
+/* Cambiar color del papel */
+.tarjeta:nth-child(1) {
   background-color: #dab49e;
 }
-
-#tarjeta3 {
+.tarjeta:nth-child(2) {
   background-color: #b8bede;
 }
-
-#tarjeta4 {
+.tarjeta:nth-child(3) {
   background-color: #e9d6b8;
 }
-
-#tarjeta5 {
+.tarjeta:nth-child(4) {
   background-color: #987184;
 }
-
-#tarjeta6 {
+.tarjeta:nth-child(5) {
   background-color: #ddea7e;
 }
-
-#tarjeta7 {
+.tarjeta:nth-child(6) {
   background-color: #e1b3ea;
 }
-
-#tarjeta8 {
+.tarjeta:nth-child(7) {
   background-color: #6a9071;
 }
