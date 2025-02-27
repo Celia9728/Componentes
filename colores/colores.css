@@ -1,0 +1,51 @@
+:root {
+  --color-morado-azul: #4c2991;
+  --color-morado: #862da3;
+  --color-morado-claro: #c1359e;
+  --color-rosa: #f27a9e;
+  --color-salmon: #fa7a79;
+  --color-salmon-claro: #f7a97b;
+}
+
+.moradoAzul {
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-morado-azul);
+}
+
+.morado {
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-morado);
+}
+
+.moradoClaro {
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-morado-claro);
+}
+
+.rosa {
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-rosa);
+}
+
+.salmon {
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-salmon);
+}
+
+.salmonClaro {
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-salmon-claro);
+  transition: 0.3s ease-in;
+  &:hover {
+    height: 100px;
+    width: 100px;
+    background-color: var(--color-morado-azul);
+    transition: 1s ease-in;
+  }
+}
