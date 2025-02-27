@@ -1,11 +1,11 @@
 @font-face {
-  font-family: tangerineBold;
+  font-family: tangerine;
   src: url('./fonts/Tangerine-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: tangerineRegular;
+  font-family: tangerine;
   src: url('./fonts/Tangerine-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -15,7 +15,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'tangerineBold', 'tangerineRegular', sans-serif;
+  font-family: 'tangerine', sans-serif;
 }
 
 section {
@@ -119,7 +119,7 @@ article {
   transition: all 0.3s ease-in-out;
 }
 
-.tarjeta {
+.papel {
   height: 250px;
   width: 200px;
   background-color: #f7dcbb;
@@ -137,29 +137,31 @@ article {
   }
 }
 
-.tarjeta:hover + .clip {
+.papel:hover + .clip {
   left: 5px;
 }
 
 /* Cambiar color del papel */
-.tarjeta:nth-child(1) {
-  background-color: #dab49e;
-}
-.tarjeta:nth-child(2) {
-  background-color: #b8bede;
-}
-.tarjeta:nth-child(3) {
-  background-color: #e9d6b8;
-}
-.tarjeta:nth-child(4) {
-  background-color: #987184;
-}
-.tarjeta:nth-child(5) {
-  background-color: #ddea7e;
-}
-.tarjeta:nth-child(6) {
-  background-color: #e1b3ea;
-}
-.tarjeta:nth-child(7) {
-  background-color: #6a9071;
+section {
+  > article:nth-child(1) > .papel {
+    background-color: #dab49e;
+  }
+  > article:nth-child(2) > .papel {
+    background-color: #b8bede;
+  }
+  > article:nth-child(3) > .papel {
+    background-color: #e9d6b8;
+  }
+  > article:nth-child(4) > .papel {
+    background-color: #987184;
+  }
+  > article:nth-child(5) > .papel {
+    background-color: #ddea7e;
+  }
+  > article:nth-child(6) > .papel {
+    background-color: #e1b3ea;
+  }
+  > article:nth-child(7) > .papel {
+    background-color: #6a9071;
+  }
 }
