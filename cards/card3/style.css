@@ -57,7 +57,7 @@ article {
     position: absolute;
     content: '';
     left: 0;
-    top: 10px;
+    top: 3.33%;
     z-index: 4;
     width: 25%;
     height: 80%;
@@ -120,8 +120,8 @@ article {
 }
 
 .papel {
-  height: 250px;
-  width: 200px;
+  width: 80%;
+  height: 85%;
   background-color: #f7dcbb;
   position: relative;
   left: 0;
