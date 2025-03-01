@@ -126,14 +126,17 @@ article {
   position: relative;
   left: 0;
   transition: all 0.3s ease-in-out;
+  /* establecerá el tipo de tamaño que va a tener el contenedor en cuestión, donde puede ser size. */
+  -webkit-container-type: size;
+  container-type: size;
 
   &:hover {
     left: 20%;
   }
 
-  & p {
+  > p {
     padding-inline: 10px;
-    font-size: 2rem; /* Modificar */
+    font-size: 11cqb; /*Porcentaje relativo al tamaño de bloque. */
   }
 }
 
