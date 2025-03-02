@@ -1,6 +1,22 @@
-img {
-  width: 150px;
-  height: 300px;
-  object-fit: contain;
-  opacity: 0.3;
+.cards {
+  > img {
+    width: 150px;
+    height: 300px;
+    object-fit: contain;
+    opacity: 0.6;
+    filter: none;
+    transition: opacity, filter, scale 0.15s ease-in;
+
+    &:hover {
+      opacity: 1;
+      scale: 1.02;
+      transition: opacity, scale 0.2s ease-in;
+    }
+  }
+
+  &:has(img:hover) > img:not(:hover) {
+    filter: grayscale(1);
+    scale: 0.98;
+    transition: filter, scale 0.2s ease-in;
+  }
 }
