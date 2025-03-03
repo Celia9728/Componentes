@@ -7,7 +7,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* outline: tomato 1px solid; */
 }
 
 section {
