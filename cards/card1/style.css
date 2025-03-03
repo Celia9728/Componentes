@@ -17,74 +17,79 @@ section {
   align-items: center;
   flex-wrap: wrap;
   padding-inline: 1rem;
-  min-height: 420px;
+  min-height: 470px;
+
+  article {
+    height: 220px;
+    max-width: 300px;
+    background: linear-gradient(135deg, #4b2991, #f27a9e, #f6a97a);
+    position: relative;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    padding: 0;
+    border-radius: 2px;
+    filter: drop-shadow(0px 0px 6px #4b2991);
+    border-radius: 50px 0px 50px 0px;
+
+    &:hover {
+      height: 470px;
+    }
+
+    > img {
+      height: 200px;
+      width: 200px;
+      position: relative;
+      top: -40px;
+      z-index: 1;
+      object-fit: cover;
+      border-radius: 3px;
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 90%,
+        rgba(0, 0, 0, 0)
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 90%,
+        rgba(0, 0, 0, 0)
+      );
+
+      &.cambiarFoco {
+        object-position: top;
+      }
+    }
+
+    > .contenido {
+      position: relative;
+      margin-top: -140px;
+      width: 100%;
+      text-align: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+
+      /* Funcion de CSS */
+      /* El tamaño de la fuente se ajusta según el ancho de la ventana */
+      /* El que cogera si el estandar es menor a este */
+      /* El estandar */
+      /* El maximo que alcanzaria */
+      font-size: clamp(12px, 3vw, 16px);
+
+      & p {
+        padding-inline: 1rem;
+      }
+
+      > .enlaces > a > img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 948px) {
   section {
     gap: 80px; /* Más espacio cuando se haga wrap */
-  }
-}
-
-article {
-  height: 220px;
-  max-width: 300px;
-  background: linear-gradient(135deg, #4b2991, #f27a9e, #f6a97a);
-  position: relative;
-  transition: 0.3s ease-in-out;
-  text-align: center;
-  padding: 0;
-  border-radius: 2px;
-  filter: drop-shadow(0px 0px 6px #4b2991);
-  border-radius: 50px 0px 50px 0px;
-}
-
-article:hover {
-  height: 420px;
-}
-
-img {
-  height: 200px;
-  width: 200px;
-  position: relative;
-  top: -40px;
-  z-index: 1;
-  object-fit: cover;
-  border-radius: 3px;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 90%,
-    rgba(0, 0, 0, 0)
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 90%,
-    rgba(0, 0, 0, 0)
-  );
-
-  &.cambiarFoco {
-    object-position: top;
-  }
-}
-
-.contenido {
-  position: relative;
-  margin-top: -140px;
-  width: 100%;
-  text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out, margin-top 0.3s ease-in-out;
-
-  /* Funcion de CSS */
-  /* El tamaño de la fuente se ajusta según el ancho de la ventana */
-  /* El que cogera si el estandar es menor a este */
-  /* El estandar */
-  /* El maximo que alcanzaria */
-  font-size: clamp(8px, 3vw, 16px);
-
-  & p {
-    padding-inline: 1rem;
   }
 }
 
