@@ -63,15 +63,8 @@ main {
     background-color: black;
     border-radius: 0px 0px 200px 200px;
 
-    &.gota {
+    & .gota {
       width: 7.67%;
     }
-  }
-
-  & .pantalla {
-    background-color: blueviolet;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
   }
 }
