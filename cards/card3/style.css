@@ -22,10 +22,10 @@ section {
   grid-template-columns: repeat(
     auto-fit,
     minmax(300px, 1fr)
-  ); /* Crea columnas flexibles con un mínimo de 300px */
-  justify-items: center; /* Alinea los items horizontalmente en el centro */
-  align-items: center; /* Alinea los items verticalmente en el centro */
-  gap: 3rem; /* Espaciado entre los elementos */
+  ); 
+  justify-items: center; 
+  align-items: center; 
+  gap: 3rem; 
   padding-inline: 1rem;
   min-height: 420px;
 }
