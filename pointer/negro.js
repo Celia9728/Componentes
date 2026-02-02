@@ -1,6 +1,6 @@
 window.onload = function () {
   let linterna = document.querySelector("#linterna");
-  let fondo = document.querySelector(".fondoIluminado");
+  let fondo = document.querySelector(".fondoNegro");
   document.addEventListener("mousemove", function (e) {
     linterna.style.left = e.clientX + "px";
     linterna.style.top = e.clientY + "px";
@@ -9,8 +9,14 @@ window.onload = function () {
     fondo.style.setProperty("--y", e.clientY + "px");
   });
 
-  linterna.addEventListener("click", function (params) {
-    console.log(linterna.getAttribute("class"));
+  document.addEventListener("keydown", function (evento) {
+    if (evento.key == "s") {
+      linterna.setAttribute("class", "encendida");
+      fondo.setAttribute("class", "fondoIluminado");
+    }
+  });
+
+  /*linterna.addEventListener("keydown", function () {
     if (this.getAttribute("class") == "encendida") {
       this.setAttribute("class", "apagada");
       fondo.setAttribute("class", "fondoNegro");
@@ -18,5 +24,5 @@ window.onload = function () {
       this.setAttribute("class", "encendida");
       fondo.setAttribute("class", "fondoIluminado");
     }
-  });
+  });*/
 };

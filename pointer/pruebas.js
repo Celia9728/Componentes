@@ -18,8 +18,8 @@ window.onload = function () {
 
     document.body.appendChild(nuevoDiv);
 
-    // setTimeout(() => {
-    //   nuevoDiv.setAttribute("class", "expand");
-    // }, 10);
+    setTimeout(() => {
+      nuevoDiv.setAttribute("class", "expand");
+    }, 10);
   }); 
 };
