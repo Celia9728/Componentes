@@ -49,7 +49,7 @@ h1 {
   z-index: 3;
   --x: 50%;
   --y: 50%;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
   background-color: rgba(255, 255, 255, 0.1);
 
   -webkit-mask-image: radial-gradient(
@@ -69,7 +69,7 @@ h1 {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 2px solid rgb(136, 80, 8);
+  border: 2px solid rgb(255, 255, 255);
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
