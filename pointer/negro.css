@@ -41,6 +41,7 @@ body {
 
   --x: 50%;
   --y: 50%;
+
   background-color: rgba(0, 0, 0, 0.95);
 }
 
@@ -65,4 +66,20 @@ body {
   width: 50px;
   height: 50px;
   box-shadow: none;
+}
+
+.foto {
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
+  position: absolute;
+  left: 300px;
+  top: 200px;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.1s;
+  -webkit-transition: opacity 0.1s;
+  -moz-transition: opacity 0.1s;
+  -ms-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
 }

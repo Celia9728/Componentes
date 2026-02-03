@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fuentes/Montserrat/Montserrat-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contenedor > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  position: absolute;
+  color: white;
+  font-size: 65px;
+  width: 75%;
+  z-index: 2;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  font-family: "Montserrat";
+}
+
+.fondo {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  --x: 50%;
+  --y: 50%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.1);
+
+  -webkit-mask-image: radial-gradient(
+    circle at var(--x) var(--y),
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 55px,
+    rgba(0, 0, 0, 1) 60px,
+    rgba(0, 0, 0, 1) 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.lupa {
+  position: absolute;
+  z-index: 4;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid rgb(136, 80, 8);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
