@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 100vh;
+  height: 100vh;
   background-color: lightblue;
   display: flex;
   justify-content: center;
@@ -22,8 +22,9 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  /* overflow: hidden; */
 
-  position: relative;
+  /* position: relative; */
 }
 
 .pupila {
@@ -37,7 +38,18 @@ body {
   -o-border-radius: 50%;
 
   position: absolute;
-  top: 30%;
+
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-}
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+/* 
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+*/
+  } 

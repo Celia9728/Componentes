@@ -55,8 +55,8 @@ h1 {
   -webkit-mask-image: radial-gradient(
     circle at var(--x) var(--y),
     rgba(0, 0, 0, 0) 0px,
-    rgba(0, 0, 0, 0) 55px,
-    rgba(0, 0, 0, 1) 60px,
+    rgba(0, 0, 0, 0) 60px,
+    rgba(0, 0, 0, 1) 65px,
     rgba(0, 0, 0, 1) 100%
   );
   -webkit-mask-repeat: no-repeat;
