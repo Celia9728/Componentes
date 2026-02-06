@@ -1,0 +1,423 @@
+:root {
+  --kirby-main-color-rgb: 241, 136, 158;
+  --kirby-pies-color-rgb: 202, 22, 78;
+  --kirby-mofletes-color-rgb: 234, 106, 118;
+}
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kirby {
+  /* Tamaño */
+  height: 320px;
+  width: 550px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 0px 5px black);
+
+  /* Posición */
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 70px 140px 100px 30px;
+  grid-template-columns: 100px 50px 100px 50px 100px 50px 100px;
+  grid-template-areas:
+    ". . . cabeza . . ."
+    "b1 b1 b1 cabeza b2 b2 b2"
+    ". p1 p1 cabeza p2 p2 ."
+    ". p1 p1 . p2 p2 .";
+}
+
+.cabeza {
+  /* Tamaño */
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 5px solid black;
+
+  /* Fondo */
+  background-color: rgb(var(--kirby-main-color-rgb));
+
+  /* Posición */
+  grid-area: cabeza;
+
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 80px 25px 25px 40px 25px 25px 80px;
+  grid-template-rows: 50px 100px 25px 75px 50px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". o1 o1 . o2 o2 ."
+    "m1 m1 . . . m2 m2"
+    ". . . boca . . ."
+    " . . . . . . .";
+}
+
+.ojos {
+  /*Tamaño*/
+  height: 100px;
+  width: 50px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 3px solid;
+  /*Fondo*/
+  background-image: linear-gradient(
+    rgba(0, 0, 0),
+    20%,
+    rgb(24, 95, 117),
+    rgb(93, 199, 169)
+  );
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4) inset;
+  /*Posición*/
+  position: relative;
+  transform: translateY(0);
+
+  transition:
+    height 0.5s ease,
+    transform 0.5s ease;
+  -webkit-transition:
+    height 0.5s ease,
+    transform 0.5s ease;
+  -moz-transition:
+    height 0.5s ease,
+    transform 0.5s ease;
+  -ms-transition:
+    height 0.5s ease,
+    transform 0.5s ease;
+  -o-transition:
+    height 0.5s ease,
+    transform 0.5s ease;
+
+  &::before {
+    /* Tamaño */
+    height: 60px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0);
+
+    /* Fondo */
+    background-color: black;
+
+    /* Posición */
+    position: absolute;
+    content: "";
+    box-sizing: border-box;
+    left: 2px;
+
+    transition: height 0.5s ease;
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -ms-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+  }
+
+  &::after {
+    /* Tamaño */
+    height: 40px;
+    width: 30px;
+    border-radius: 50%;
+
+    /* Fondo */
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4) inset;
+
+    /* Posición */
+    position: absolute;
+    content: "";
+    box-sizing: border-box;
+    left: 7px;
+    top: 2px;
+
+    transition: height 0.5s ease;
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -ms-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+  }
+}
+
+.ojosCerrados {
+  /*Tamaño*/
+  height: 30px;
+  width: 50px;
+  box-sizing: border-box;
+  border-top: 3px solid black;
+  border-radius: 50px 50px 0 0;
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+  -ms-border-radius: 50px 50px 0 0;
+  -o-border-radius: 50px 50px 0 0;
+
+  transition:
+    height 0.5s ease,
+    transform 0.5s ease,
+    border-radius 0.5s ease;
+  -webkit-transition:
+    height 0.5s ease,
+    transform 0.5s ease,
+    border-radius 0.5s ease;
+  -moz-transition:
+    height 0.5s ease,
+    transform 0.5s ease,
+    border-radius 0.5s ease;
+  -ms-transition:
+    height 0.5s ease,
+    transform 0.5s ease,
+    border-radius 0.5s ease;
+  -o-transition:
+    height 0.5s ease,
+    transform 0.5s ease,
+    border-radius 0.5s ease;
+  /*Posición*/
+  position: relative;
+  transform: translateY(40px);
+  -webkit-transform: translateY(40px);
+  -moz-transform: translateY(40px);
+  -ms-transform: translateY(40px);
+  -o-transform: translateY(40px);
+}
+
+#o1 {
+  grid-area: o1;
+}
+
+#o2 {
+  grid-area: o2;
+}
+
+.mofletes {
+  /* Tamaño */
+  width: 70px;
+  height: 35px;
+
+  /* Fondo */
+  background-color: rgb(var(--kirby-mofletes-color-rgb), 0.8);
+  /* Borde */
+  border-radius: 50%;
+}
+
+#m1 {
+  grid-area: m1;
+  transform: rotate(15deg);
+}
+
+#m2 {
+  grid-area: m2;
+  transform: rotate(-15deg);
+}
+
+.boca {
+  /*Tamaño*/
+  height: 60px;
+  width: 50px;
+  border-radius: 5px 5px 25px 25px;
+  border: 3px solid;
+  /*Fondo*/
+  background-color: rgb(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.5) inset;
+  /*Posición*/
+  grid-area: boca;
+  position: relative;
+  box-sizing: border-box;
+
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+
+  &::before {
+    /* Tamaño */
+    height: 34px;
+    width: 45px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid;
+
+    /* Fondo */
+    background-color: rgb(var(--kirby-mofletes-color-rgb));
+
+    /* posición */
+    position: absolute;
+    content: "";
+    bottom: -2px;
+
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+}
+
+.bocaCerrada {
+  /*Tamaño*/
+  height: 10px;
+  width: 50px;
+  border-radius: 5px 5px 25px 25px;
+  border: 3px solid;
+  /*Fondo*/
+  background-color: rgb(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.5) inset;
+  /*Posición*/
+  grid-area: boca;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+
+  &::before {
+    /*Tamaño*/
+    height: 5px;
+    width: 45px;
+    box-sizing: border-box;
+
+    /*border-radius: 50%;
+    */
+    border-radius: 10px 10px 25px 25px;
+
+    border: 1px solid;
+    /*Fondo*/
+    background-color: rgb(var(--kirby-mofletes-color-rgb));
+    /*posición*/
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-border-radius: 5px 5px 25px 25px;
+    -moz-border-radius: 5px 5px 25px 25px;
+    -ms-border-radius: 5px 5px 25px 25px;
+    -o-border-radius: 5px 5px 25px 25px;
+  }
+}
+
+.brazos {
+  /*Tmaño*/
+  height: 150px;
+  width: 90px;
+  border-radius: 50%;
+  border: 5px solid black;
+  /*Fondo*/
+  background-color: rgb(var(--kirby-main-color-rgb));
+  /*Posición*/
+  z-index: -1;
+  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  -o-transform: rotate(50deg);
+}
+
+.br2 {
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
+#b1 {
+  grid-area: b1;
+}
+
+#b2 {
+  grid-area: b2;
+  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  -o-transform: rotate(50deg);
+}
+
+#b2Movimiento {
+  grid-area: b2;
+  transform: rotate(125deg);
+  -webkit-transform: rotate(125deg);
+  -moz-transform: rotate(125deg);
+  -ms-transform: rotate(125deg);
+  -o-transform: rotate(125deg);
+}
+
+.pies {
+  /* Tamaño */
+  height: 95px;
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid black;
+
+  /* Fondo */
+  background-color: rgb(var(--kirby-pies-color-rgb));
+
+  /* Posición */
+  box-sizing: border-box;
+  z-index: -1;
+  position: relative;
+}
+
+#p1 {
+  grid-area: p1;
+  position: relative;
+
+  &::before {
+    /* Tamaño */
+    height: 40px;
+    width: 30px;
+    border-radius: 50%;
+
+    /* Fondo */
+    background-color: rgb(251, 99, 111);
+
+    /* Posición */
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 10px;
+    transform: rotate(-40deg);
+  }
+}
+
+#p2 {
+  grid-area: p2;
+
+  &::before {
+    /* Tamaño */
+    height: 40px;
+    width: 30px;
+    border-radius: 50%;
+
+    /* Fondo */
+    background-color: rgb(251, 99, 111);
+
+    /* Posición */
+    position: absolute;
+    content: "";
+    top: 30px;
+    right: 10px;
+    transform: rotate(40deg);
+  }
+}
+
+/* div {
+    transition: height 0.5s ease;
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -ms-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+} */
